@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import pl.makalous.kuzma.entity.KuzmaEntity;
 import pl.makalous.kuzma.repository.KuzmaRepository;
 
+import java.util.Collections;
+
 @Service
 public class KuzmaService {
     private KuzmaEntity kuzmaEntity;
@@ -18,7 +20,14 @@ public class KuzmaService {
     }
 
     public ResponseEntity showKuzma(Long id){
-        return ResponseEntity.ok(true);
+        return ResponseEntity.ok(kuzmaRepository.findById(id));
+    }
+
+    public ResponseEntity putKuzma (Long id, String name){
+        kuzmaEntity.setId(id);
+        kuzmaEntity.setName(name);
+        kuzmaRepository.save(kuzmaEntity);
+        return ResponseEntity.ok(Collections.singletonMap("Status: ", true));
     }
 
 }
