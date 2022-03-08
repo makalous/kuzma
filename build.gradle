@@ -6,7 +6,7 @@ plugins {
 
 group = 'pl.makalous'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '11'
 
 configurations {
 	compileOnly {
@@ -27,6 +27,7 @@ repositories {
 dependencies {
 	jaxb("org.glassfish.jaxb:jaxb-xjc")
 	implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
@@ -35,6 +36,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
 	implementation 'wsdl4j:wsdl4j'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+	implementation 'io.projectreactor:reactor-core:3.4.15'
+	implementation'org.elasticsearch.client:elasticsearch-rest-high-level-client'
 	implementation files ('src/main/resources/oracle/ojdbc6-11.2.0.3.jar')
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
