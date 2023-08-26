@@ -1,4 +1,4 @@
-package pl.makalous.strategy;
+package pl.makalous.mvc.strategy;
 
 public class EvenBiggerThanLastOne {
     SomethingBiggerLol somethingBiggerLol = new SomethingBiggerLol();

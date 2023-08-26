@@ -1,4 +1,4 @@
-package pl.makalous.strategy;
+package pl.makalous.mvc.strategy;
 
 import lombok.Getter;
 import lombok.Setter;
