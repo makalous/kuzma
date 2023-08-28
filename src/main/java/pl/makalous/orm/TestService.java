@@ -27,4 +27,9 @@ public class TestService {
         }
         return toReturn;
     }
+
+    public void saveToTheTable(ControllerInputDto controllerInputDto) {
+        TestEntity2 testEntity2 = MapperToEntity.mapToEntity2(controllerInputDto);
+        testEntity2Repository.save(testEntity2);
+    }
 }
