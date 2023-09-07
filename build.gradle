@@ -38,6 +38,8 @@ dependencies {
 	implementation 'com.h2database:h2:2.2.220'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 	implementation 'io.projectreactor:reactor-core:3.4.15'
+	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	implementation 'io.springfox:springfox-swagger-ui:3.0.0'
 	implementation'org.elasticsearch.client:elasticsearch-rest-high-level-client'
 	implementation files ('src/main/resources/oracle/ojdbc6-11.2.0.3.jar')
 	compileOnly 'org.projectlombok:lombok'

@@ -10,8 +10,5 @@ public class EntityTwo {
     private int id;
     private double price;
     private String date;
-    @JoinTable(joinColumns = @JoinColumn(name = "entity_two_id"),
-            inverseJoinColumns = @JoinColumn(name = "entity_one_id"))
-    @ManyToOne
-    private Set<EntityOne> joinResult;
+
 }

@@ -9,8 +9,5 @@ public class EntityOne {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    @JoinTable(joinColumns = @JoinColumn(name = "entity_one_id"),
-            inverseJoinColumns = @JoinColumn(name = "entity_two_id"))
-    @OneToMany
-    private Set<EntityTwo> joinResult;
+
 }
